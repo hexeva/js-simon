@@ -16,7 +16,7 @@
           const message = alert('Numeri estratti: ' + randomNumbers);
           randomNumbersArray.push(randomNumbers);
         }
-         console.log(randomNumbersArray);
+        //  console.log(randomNumbersArray);
 
 
 // Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
@@ -29,6 +29,16 @@
 
 
 
+   
+// scorro elemnti dell'array di numeri inseriti dall'utente
+
+userNumberArray.forEach((elements,index) => {
+    console.log(elements);
+});
+
+    
+  
+
     
 
     
@@ -38,7 +48,7 @@
 
     // FUNZIONI
     // funzione di callback per il timing ---- per 5 volte, dopo il tempo trascorso chiederò all'utente(tramite prompt) di inserire i numeri visualizzati
-
+        
     function numberRequest (){
        
         randomNumbersArray.forEach((elements,index) => {
@@ -46,9 +56,11 @@
             userNumberArray.push(userRequest);
         
          });
-          console.log(userNumberArray);
+        //   console.log(userNumberArray);
 
     };
+
+    
     
 
 
