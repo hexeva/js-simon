@@ -52,24 +52,40 @@
        
     function numberRequest (){
        
-        randomNumbersArray.forEach((elements,index) => {
+        randomNumbersArray.forEach((element,index) => {
              const userRequest = parseInt(prompt('dimmi i numeri'));
-             console.log(userRequest);
+            //  console.log(userRequest);
             userNumberArray.push(userRequest);
-        //  per ogni numero random che corrisponde ai numeri inseriti dall'utente li pusho in un nuovo array 
-            if(elements == userNumberArray.elements){
-                rightNumbers.push(elements);
-            }
             
-
         
          });
-         
-         console.log(rightNumbers);
-        
-        
-       
+
+           //  per ogni numero random che corrisponde ai numeri inseriti dall'utente li pusho in un nuovo array 
+        userNumberArray.forEach((element,index) => {
+            // console.log(element);
+            // randomNumbersArray.includes(element);
+            if(randomNumbersArray.includes(element)){
+                rightNumbers.push(element);
+            }
+        });
+        console.log(rightNumbers);
+
+        let message;
+        let arrayLenght = rightNumbers.length;
+        console.log(arrayLenght);
+        if(rightNumbers.length == 0){
             
+            
+            message = alert(`hai indovinato ${arrayLenght} numeri`);
+
+        }else if(rightNumbers.length > 0){
+            message = alert(`hai indovinato ${arrayLenght} numeri`);
+
+
+        
+        };
+         
+          
 
            
 
