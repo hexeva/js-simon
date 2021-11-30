@@ -8,6 +8,8 @@
         const randomNumbersArray = [];
         // creo un array per i numeri scelti dall'utente
         const userNumberArray =[];
+
+        const rightNumbers =[];
         
         let randomNumbers;
 
@@ -24,6 +26,7 @@
     // in questo caso avrò bisogno di una timing function di tipo SET TIMEOUT
 
     const clock = setTimeout(numberRequest,3000);
+    
 
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
@@ -32,9 +35,7 @@
    
 // scorro elemnti dell'array di numeri inseriti dall'utente
 
-userNumberArray.forEach((elements,index) => {
-    console.log(elements);
-});
+
 
     
   
@@ -48,17 +49,34 @@ userNumberArray.forEach((elements,index) => {
 
     // FUNZIONI
     // funzione di callback per il timing ---- per 5 volte, dopo il tempo trascorso chiederò all'utente(tramite prompt) di inserire i numeri visualizzati
-        
+       
     function numberRequest (){
        
         randomNumbersArray.forEach((elements,index) => {
-            const userRequest = parseInt(prompt('dimmi i numeri'));
+             const userRequest = parseInt(prompt('dimmi i numeri'));
+             console.log(userRequest);
             userNumberArray.push(userRequest);
+        //  per ogni numero random che corrisponde ai numeri inseriti dall'utente li pusho in un nuovo array 
+            if(elements == userNumberArray.elements){
+                rightNumbers.push(elements);
+            }
+            
+
         
          });
-        //   console.log(userNumberArray);
+         
+         console.log(rightNumbers);
+        
+        
+       
+            
+
+           
+
 
     };
+    // fine funzione
+   
 
     
     
