@@ -8,7 +8,7 @@
         const randomNumbersArray = [];
         // creo un array per i numeri scelti dall'utente
         const userNumberArray =[];
-
+        // creo array per numeri indovinati
         const rightNumbers =[];
         
         let randomNumbers;
@@ -63,7 +63,7 @@
            //  per ogni numero random che corrisponde ai numeri inseriti dall'utente li pusho in un nuovo array 
         userNumberArray.forEach((element,index) => {
             // console.log(element);
-            // randomNumbersArray.includes(element);
+        
             if(randomNumbersArray.includes(element)){
                 rightNumbers.push(element);
             }
@@ -72,22 +72,27 @@
 
         let message;
         let arrayLenght = rightNumbers.length;
-        console.log(arrayLenght);
-        if(rightNumbers.length == 0){
-            
-            
-            message = alert(`hai indovinato ${arrayLenght} numeri`);
-
-        }else if(rightNumbers.length > 0){
-            message = alert(`hai indovinato ${arrayLenght} numeri`);
-
-
         
-        };
-         
-          
+        console.log(arrayLenght);
+         rightNumbers.forEach((element,index,array) =>{
 
-           
+            
+
+            if(arrayLenght == 0){
+            
+            
+                message = alert(`hai indovinato ${arrayLenght} numeri`);
+    
+             }else if(arrayLenght > 0){
+                message = alert(`hai indovinato ${arrayLenght} numeri :${element}`);
+    
+            
+             };
+             
+
+         });
+
+       
 
 
     };
