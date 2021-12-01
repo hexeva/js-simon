@@ -30,21 +30,8 @@
 
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
-
-
-   
-// scorro elemnti dell'array di numeri inseriti dall'utente
-
-
-
-    
-  
-
-    
-
     
     
-
 
 
     // FUNZIONI
@@ -60,7 +47,7 @@
         
          });
 
-           //  per ogni numero random che corrisponde ai numeri inseriti dall'utente li pusho in un nuovo array 
+           //  per ogni elemento inserito dall'utente che corrisponde ai numeri random, li pusho in un nuovo array 
         userNumberArray.forEach((element,index) => {
             // console.log(element);
         
@@ -83,8 +70,8 @@
             
                 message = alert(`hai indovinato ${arrayLenght} numeri`);
     
-             }else if(arrayLenght > 0){
-                message = alert(`hai indovinato ${arrayLenght} numeri :${element}`);
+             } else if(arrayLenght > 0){
+                message = alert(`hai indovinato ${arrayLenght} numeri : ${element}`);
     
             
              };
