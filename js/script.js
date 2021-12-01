@@ -58,20 +58,20 @@
         console.log(rightNumbers);
 
         let message;
-        let arrayLenght = rightNumbers.length;
+        let arrayLength = rightNumbers.length;
         
-        console.log(arrayLenght);
+        console.log(arrayLength);
          rightNumbers.forEach((element,index,array) =>{
 
             
 
-            if(arrayLenght == 0){
+            if(arrayLength == 0){
             
             
-                message = alert(`hai indovinato ${arrayLenght} numeri`);
+                message = alert(`hai indovinato ${arrayLength} numeri`);
     
-             } else if(arrayLenght > 0){
-                message = alert(`hai indovinato ${arrayLenght} numeri : ${element}`);
+             } else if(arrayLength> 0){
+                message = alert(`hai indovinato ${arrayLength} numeri : ${element}`);
     
             
              };
